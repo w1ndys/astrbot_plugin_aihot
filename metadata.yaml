@@ -1,0 +1,16 @@
+name: astrbot_plugin_aihot
+display_name: AIHOT 精选监控
+short_desc: 轮询 AIHOT 精选增量，合并推送到 WebUI 里开启的群
+desc: |
+  只读请求 aihot.news 的 /api/v1 公开接口，跟踪 AIHOT 精选的增量。
+  新入选的条目按分类、最低分、关键词过滤后合并成一条消息，推送到已开启的群。
+  修改与撤选只在本地更新，不在群里说话。
+  第一次运行只建立同步基线，不补推装机前的旧内容。
+  开哪些群在插件页面增删改查，不使用群口令；群内可用 aihot 指令查最新精选。
+  内容来自 AIHOT，原文版权归各来源所有。
+version: 0.1.0
+author: w1ndys
+repo: https://github.com/w1ndys/astrbot_plugin_aihot
+astrbot_version: ">=4.13"
+support_platforms:
+  - aiocqhttp
